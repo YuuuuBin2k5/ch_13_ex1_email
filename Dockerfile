@@ -3,5 +3,5 @@ FROM tomcat:10.1-jdk17
 
 # Bước 3: Copy file .war vào và đổi tên thành ROOT.war
 # Tomcat sẽ tự động giải nén nó khi khởi động
-COPY dist/ch_13_exl_email_download.war /usr/local/tomcat/webapps/ROOT.war
+COPY dist/ch_13_exl_email.war /usr/local/tomcat/webapps/ROOT.war
 
