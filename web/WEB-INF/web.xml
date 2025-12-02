@@ -7,4 +7,14 @@
     <welcome-file-list>
         <welcome-file>email.jsp</welcome-file>
     </welcome-file-list>
+    
+    <servlet>
+        <servlet-name>UsersServlet</servlet-name>
+        <servlet-class>murach.admin.UsersServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>UsersServlet</servlet-name>
+        <url-pattern>/userAdmin</url-pattern>
+    </servlet-mapping>
 </web-app>

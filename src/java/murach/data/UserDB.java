@@ -1,9 +1,9 @@
 package murach.data;
 
-import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
 import javax.persistence.NoResultException;
@@ -73,6 +73,21 @@ public class UserDB {
         } finally {
             em.close();
         }
+    }
+    // --- SELECT ALL (Bài 13-2 yêu cầu thêm) ---
+    public static List<User> selectUsers() {
+        EntityManager em = DBUtil.getEmFactory().createEntityManager();
+        String qString = "SELECT u FROM User u";
+        TypedQuery<User> q = em.createQuery(qString, User.class);
+        List<User> results = null;
+        try {
+            results = q.getResultList();
+        } catch (NoResultException e) {
+            return null; // Hoặc trả về list rỗng
+        } finally {
+            em.close();
+        }
+        return results;
     }
     
     public static User getUserById(long userId) {
