@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context path="/ch_13_exl_email">
+    <Resource name="jdbc/murach" 
+              auth="Container" 
+              type="javax.sql.DataSource"
+              driverClassName="org.postgresql.Driver" 
+              url="jdbc:postgresql://dpg-d4jtr1chg0os73abi7r0-a.oregon-postgres.render.com:5432/ch_13_database" 
+              username="ch_13_user" 
+              password="PiRK2582bR3JSNXGZWPgHvwGMWCqAkH7" 
+              maxTotal="100" 
+              maxIdle="30" 
+              maxWaitMillis="10000"
+              removeAbandonedOnBorrow="true" 
+              removeAbandonedTimeout="60"
+              logAbandoned="true" />
+</Context>
